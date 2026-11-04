@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IRKA MODE – Couture sur mesure pour toute la famille</title>
+<meta name="description" content="IRKA MODE, atelier de couture à Salongo, Lemba (Kinshasa) : vêtements sur mesure, retouches, tenues de cérémonie et vêtements d’enfants.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Ajouter plus tard : horaires, photos des réalisations. -->
+<style>
+:root{
+  --jaune:#F2B705; --jaune-clair:#FFE79A;
+  --vert:#0E5A39; --vert-clair:#DDEFE3;
+  --rouge:#D6432A;
+  --fond:#FFFCF2; --encre:#16251D; --gris:#4D5C53;
+  --rayon:20px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--encre);background:var(--fond);line-height:1.65;font-size:1.05rem}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rouge);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+section{padding:clamp(56px,9vw,104px) 0}
+
+/* Motif wax : cercles concentriques */
+:root{
+  --wax:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%230E5A39'/%3E%3Ccircle cx='60' cy='60' r='54' fill='%23F2B705'/%3E%3Ccircle cx='60' cy='60' r='42' fill='%230E5A39'/%3E%3Ccircle cx='60' cy='60' r='30' fill='%23D6432A'/%3E%3Ccircle cx='60' cy='60' r='16' fill='%23FFFCF2'/%3E%3Ccircle cx='0' cy='0' r='20' fill='%23F2B705'/%3E%3Ccircle cx='120' cy='0' r='20' fill='%23F2B705'/%3E%3Ccircle cx='0' cy='120' r='20' fill='%23F2B705'/%3E%3Ccircle cx='120' cy='120' r='20' fill='%23F2B705'/%3E%3C/svg%3E");
+}
+
+/* En-tête */
+header{position:sticky;top:0;z-index:10;background:rgba(255,252,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e9e2c9}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.3rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--wax) center/60px;display:block;border:2px solid var(--encre)}
+nav ul{list-style:none;display:flex;gap:26px;padding:0}
+nav a{text-decoration:none;font-weight:600}
+nav a:hover{color:var(--vert);text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--jaune);text-underline-offset:6px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--encre);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--encre)}
+.btn-jaune{background:var(--jaune)}
+.btn-vert{background:var(--vert);color:#fff;border-color:var(--vert)}
+.btn-vert:hover{box-shadow:4px 4px 0 var(--jaune)}
+.btn-ligne{background:transparent}
+.nav .btn{padding:10px 20px}
+
+/* Hero */
+.hero{padding-top:clamp(40px,7vw,84px)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:800}
+.hero h1 span{background:linear-gradient(transparent 62%,var(--jaune) 62%)}
+.hero p.lead{margin:22px 0 30px;max-width:46ch;color:var(--gris);font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.preuves{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-weight:600;color:var(--vert);list-style:none;padding:0}
+.preuves li::before{content:"✂";margin-right:8px;color:var(--rouge)}
+.visuel{position:relative;aspect-ratio:1/1.05;border-radius:var(--rayon) var(--rayon) 160px var(--rayon);background:var(--wax) 0 0/150px;border:3px solid var(--encre);box-shadow:10px 10px 0 var(--jaune)}
+.badge{position:absolute;left:-18px;bottom:28px;background:var(--fond);border:3px solid var(--encre);border-radius:16px;padding:14px 18px;max-width:240px;line-height:1.35;box-shadow:5px 5px 0 var(--rouge)}
+.badge b{font-family:"Bricolage Grotesque",sans-serif;display:block;font-size:1.05rem}
+.badge small{color:var(--gris);font-size:.9rem}
+
+/* Bandeau */
+.bandeau{background:var(--vert);color:#fff;overflow:hidden;border-block:3px solid var(--encre);padding:14px 0;white-space:nowrap}
+.bandeau div{display:inline-block;padding-left:100%;animation:defile 32s linear infinite;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.15rem}
+.bandeau span{margin:0 22px;color:var(--jaune)}
+@keyframes defile{to{transform:translateX(-100%)}}
+
+/* Titres de section */
+.titre{max-width:640px;margin-bottom:44px}
+.titre h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:800}
+.titre p{margin-top:14px;color:var(--gris)}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.svc{border:2px solid var(--encre);border-radius:var(--rayon);padding:28px;display:flex;flex-direction:column;gap:10px}
+.svc h3{font-size:1.45rem}
+.svc p{font-size:1rem}
+.svc .ico{font-size:2rem;line-height:1}
+.svc:nth-child(1){grid-column:span 3;background:var(--jaune)}
+.svc:nth-child(2){grid-column:span 3;background:var(--vert);color:#fff}
+.svc:nth-child(3){grid-column:span 2;background:var(--vert-clair)}
+.svc:nth-child(4){grid-column:span 2;background:var(--jaune-clair)}
+.svc:nth-child(5){grid-column:span 2;background:#fff}
+
+/* Pourquoi nous */
+.pourquoi{background:var(--vert-clair);border-block:3px solid var(--encre)}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.points h3{font-size:1.3rem;margin-bottom:8px}
+.points p{color:var(--gris)}
+.points .rond{width:56px;height:56px;border-radius:50%;background:var(--wax) center/112px;border:2px solid var(--encre);margin-bottom:16px}
+
+/* Étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none;padding:0;counter-reset:e}
+.etapes li{counter-increment:e;border-top:4px solid var(--encre);padding-top:18px}
+.etapes li::before{content:counter(e);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--jaune);border:2px solid var(--encre);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;margin-bottom:14px}
+.etapes h3{font-size:1.2rem;margin-bottom:6px}
+.etapes p{color:var(--gris);font-size:1rem}
+
+/* Contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.infos{display:grid;gap:22px;margin-top:26px}
+.infos h3{font-size:1.1rem;margin-bottom:4px;color:var(--vert)}
+.infos a{font-weight:600}
+.carte{background:var(--vert);color:#fff;border-radius:var(--rayon);padding:36px;border:3px solid var(--encre);box-shadow:8px 8px 0 var(--jaune)}
+.carte h3{font-size:1.8rem;margin-bottom:12px}
+.carte p{margin-bottom:24px}
+.carte .btn-ligne{color:#fff;border-color:#fff}
+.carte .btn-ligne:hover{box-shadow:4px 4px 0 var(--jaune)}
+
+footer.pied{background:var(--encre);color:#d8e2db;padding:32px 0;font-size:.95rem}
+footer.pied .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:860px){
+  nav ul{display:none}
+  .hero .wrap,.contact .wrap{grid-template-columns:1fr}
+  .points{grid-template-columns:1fr}
+  .etapes{grid-template-columns:1fr 1fr}
+  .services{grid-template-columns:1fr}
+  .svc:nth-child(n){grid-column:auto}
+  .visuel{aspect-ratio:1/.8;order:-1}
+  .badge{left:12px}
+}
+@media (max-width:480px){.etapes{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .bandeau div{animation:none;padding-left:0;white-space:normal}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#accueil"><i aria-hidden="true"></i>IRKA MODE</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#atelier">L’atelier</a></li>
+        <li><a href="#etapes">Comment ça marche</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-jaune" href="https://wa.me/243973686041" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="accueil">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Des vêtements faits <span>pour vous</span>, à votre mesure.</h1>
+        <p class="lead">Atelier de couture pour toute la famille : tenues sur mesure, retouches, vêtements d’enfants et habits de cérémonie. Chaque pièce est coupée et cousue avec soin.</p>
+        <div class="cta">
+          <a class="btn btn-vert" href="https://wa.me/243973686041" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+          <a class="btn btn-ligne" href="#contact">Nous trouver</a>
+        </div>
+        <ul class="preuves">
+          <li>Sur mesure</li>
+          <li>Pour adultes et enfants</li>
+          <li>Retouches</li>
+        </ul>
+      </div>
+      <div class="visuel" role="img" aria-label="Motif de tissu wax jaune, vert et rouge">
+        <div class="badge"><b>Atelier de couture</b><small>Avenue Béni, n° 37, Salongo, Lemba</small></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bandeau" aria-hidden="true"><div>Sur mesure <span>✺</span> Retouches <span>✺</span> Tenues de cérémonie <span>✺</span> Vêtements d’enfants <span>✺</span> Uniformes <span>✺</span> Sur mesure <span>✺</span> Retouches <span>✺</span> Tenues de cérémonie <span>✺</span> Vêtements d’enfants <span>✺</span></div></div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="titre">
+        <h2>Ce que nous cousons pour vous</h2>
+        <p>Apportez votre tissu ou choisissez parmi nos modèles. Nous vous conseillons sur la coupe et la couleur.</p>
+      </div>
+      <div class="services">
+        <article class="svc"><span class="ico" aria-hidden="true">👗</span><h3>Couture sur mesure</h3><p>Robes, pagnes, chemises, costumes et ensembles, coupés exactement à vos mesures.</p></article>
+        <article class="svc"><span class="ico" aria-hidden="true">🎉</span><h3>Tenues de cérémonie</h3><p>Mariages, baptêmes, fêtes de famille : une tenue élégante qui vous va parfaitement le grand jour.</p></article>
+        <article class="svc"><span class="ico" aria-hidden="true">🧒</span><h3>Vêtements d’enfants</h3><p>Tenues confortables et solides, avec de la marge pour que l’enfant grandisse.</p></article>
+        <article class="svc"><span class="ico" aria-hidden="true">🪡</span><h3>Retouches</h3><p>Ourlets, fermetures, ajustements : redonnez vie à vos vêtements préférés.</p></article>
+        <article class="svc"><span class="ico" aria-hidden="true">🎒</span><h3>Uniformes</h3><p>Uniformes d’école et tenues de groupe, en petite ou grande quantité.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="atelier" class="pourquoi">
+    <div class="wrap">
+      <div class="titre">
+        <h2>Un atelier de quartier, un travail soigné</h2>
+        <p>À Salongo, l’atelier IRKA MODE accueille chaque client comme un membre de la famille.</p>
+      </div>
+      <div class="points">
+        <div><div class="rond" aria-hidden="true"></div><h3>Des finitions propres</h3><p>Coutures renforcées, doublures nettes, boutons bien posés : nous vérifions chaque détail avant la livraison.</p></div>
+        <div><div class="rond" aria-hidden="true"></div><h3>Des conseils honnêtes</h3><p>Nous vous disons quelle coupe et quel tissu vous mettront en valeur, selon votre budget.</p></div>
+        <div><div class="rond" aria-hidden="true"></div><h3>Des délais tenus</h3><p>La date de livraison est fixée avec vous dès la commande, et nous nous y tenons.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="etapes">
+    <div class="wrap">
+      <div class="titre"><h2>Comment ça marche</h2></div>
+      <ol class="etapes">
+        <li><h3>Vous nous contactez</h3><p>Passez à l’atelier ou écrivez-nous sur WhatsApp avec votre idée ou une photo du modèle.</p></li>
+        <li><h3>Nous prenons vos mesures</h3><p>Nous choisissons ensemble le modèle, le tissu et la date de livraison.</p></li>
+        <li><h3>Nous cousons</h3><p>Votre tenue est coupée, assemblée et essayée une première fois si besoin.</p></li>
+        <li><h3>Vous récupérez votre tenue</h3><p>Dernier essayage, petites retouches, et vous repartez avec une pièce qui vous va.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <div class="titre" style="margin-bottom:0"><h2>Venez nous voir</h2><p>Passez à l’atelier pour une prise de mesures ou un simple conseil.</p></div>
+        <div class="infos">
+          <div><h3>Adresse</h3><address style="font-style:normal">Avenue Béni, n° 37<br>Quartier Salongo, Commune de Lemba<br>Kinshasa</address></div>
+          <div><h3>WhatsApp</h3><a href="https://wa.me/243973686041" target="_blank" rel="noopener">+243 973 686 041</a><br><a href="https://wa.me/243907159286" target="_blank" rel="noopener">+243 907 159 286</a></div>
+        </div>
+      </div>
+      <div class="carte">
+        <h3>Une idée de tenue ?</h3>
+        <p>Venez à l’atelier ou écrivez-nous avec votre tissu ou une photo du modèle que vous aimez. Nous en parlons ensemble.</p>
+        <div class="cta">
+          <a class="btn btn-jaune" href="https://wa.me/243973686041" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+          <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&amp;query=Avenue+B%C3%A9ni+37+Salongo+Lemba+Kinshasa" target="_blank" rel="noopener">Voir sur la carte</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <span>© 2026 IRKA MODE. Tous droits réservés.</span>
+    <span>Avenue Béni, n° 37, Salongo, Lemba</span>
+  </div>
+</footer>
+
+</body>
+</html>
